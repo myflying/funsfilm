@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">精彩一刻</string>
+
+    <string name="home_item_name">首页</string>
+    <string name="category_item_name">分类</string>
+    <string name="square_item_name">广场</string>
+    <string name="my_item_name">我的</string>
+
+    <string name="new_movie_name">最新</string>
+    <string name="domestic_movie_name">国内</string>
+    <string name="ea_movie_name">欧美</string>
+    <string name="jk_movie_name">日韩</string>
+
+    <string name="director_name">导演：</string>
+    <string name="performer_name">主演：</string>
+    <string name="movie_type_name">类型：</string>
+    <string name="movie_time_name">时长：</string>
+    <string name="search_movie_hint_name">请输入电影名</string>
+
+    <string name="hint_user_name_text">请输入用户名</string>
+    <string name="hint_password_text">请输入密码</string>
+    <string name="hint_validate_code_text">请输入验证码</string>
+    <string name="login_text">登  录</string>
+    <string name="register_text">注册账号</string>
+    <string name="forget_password_text">忘记密码?</string>
+    <string name="quick_login_text">快速登录</string>
+    <string name="login_show_text">精彩你的生活</string>
+</resources>

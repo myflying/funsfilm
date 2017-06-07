@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/common_head_view"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_12"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/movie_btn"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="@dimen/dp_1"
+                android:layout_weight="1"
+                android:background="@drawable/common_bg"
+                android:drawableLeft="@mipmap/movie_icon"
+                android:paddingBottom="@dimen/dp_12"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingRight="@dimen/dp_24"
+                android:paddingTop="@dimen/dp_12"
+                android:text="电影"
+                android:textColor="@color/black1"
+                android:textSize="18sp"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="@dimen/dp_1"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_weight="1"
+                android:background="@drawable/common_bg"
+                android:drawableLeft="@mipmap/tv_icon"
+                android:paddingBottom="@dimen/dp_12"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingRight="@dimen/dp_24"
+                android:paddingTop="@dimen/dp_12"
+                android:text="电视"
+                android:textColor="@color/black1"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_12"
+            android:layout_marginTop="48dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="@dimen/dp_1"
+                android:layout_weight="1"
+                android:background="@drawable/common_bg"
+                android:drawableLeft="@mipmap/variety_icon"
+                android:paddingBottom="@dimen/dp_12"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingRight="@dimen/dp_24"
+                android:paddingTop="@dimen/dp_12"
+                android:text="综艺"
+                android:textColor="@color/black1"
+                android:textSize="18sp"/>
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="@dimen/dp_1"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_weight="1"
+                android:background="@drawable/common_bg"
+                android:drawableLeft="@mipmap/comic_icon"
+                android:paddingBottom="@dimen/dp_12"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingRight="@dimen/dp_24"
+                android:paddingTop="@dimen/dp_12"
+                android:text="动漫"
+                android:textColor="@color/black1"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_12"
+            android:layout_marginTop="48dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_margin="@dimen/dp_1"
+                android:layout_weight="1"
+                android:background="@drawable/common_bg"
+                android:drawableLeft="@mipmap/game_icon"
+                android:paddingBottom="@dimen/dp_12"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingRight="@dimen/dp_24"
+                android:paddingTop="@dimen/dp_12"
+                android:text="游戏"
+                android:textColor="@color/black1"
+                android:textSize="18sp"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="@dimen/dp_1"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_weight="1"
+                android:background="@drawable/common_bg"
+                android:drawableLeft="@mipmap/mm_icon"
+                android:paddingBottom="@dimen/dp_12"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingRight="@dimen/dp_24"
+                android:paddingTop="@dimen/dp_12"
+                android:text="妹子"
+                android:textColor="@color/black1"
+                android:textSize="18sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

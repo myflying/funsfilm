@@ -1,0 +1,135 @@
+package com.ant.funsfilm.ui.fragment;
+
+import android.content.Context;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
+
+import com.ant.funsfilm.R;
+import com.ant.funsfilm.bean.MovieInfoEntity;
+import com.ant.funsfilm.ui.adapter.HeaderAndFooterAdapter;
+import com.bigkoo.convenientbanner.ConvenientBanner;
+import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
+import com.bigkoo.convenientbanner.holder.Holder;
+import com.bigkoo.convenientbanner.listener.OnItemClickListener;
+import com.bumptech.glide.Glide;
+import com.orhanobut.logger.Logger;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+/**
+ * Created by admin on 2017/4/11.
+ */
+
+public class HomeFragment extends BaseFragment {
+
+    @BindView(R.id.main_movie_list)
+    RecyclerView movieRecyclerView;
+
+    View headerView = null;
+
+    ConvenientBanner convenientBanner;
+
+    HeaderAndFooterAdapter adpater;
+
+    private String[] movieStr = {"http://img5.mtime.cn/mg/2017/04/10/142604.31208891_270X405X4.jpg", "http://img5.mtime.cn/mt/2017/03/10/100416.61663220_100X150X4.jpg", "http://img5.mtime.cn/mt/2017/04/08/124652.27542728_100X150X4.jpg", "http://img5.mtime.cn/mt/2017/03/28/152940.49244572_100X150X4.jpg",
+            "http://img5.mtime.cn/mt/2017/03/09/092409.50105858_100X150X4.jpg", "http://img5.mtime.cn/mt/2017/04/11/111227.60076107_100X150X4.jpg"};
+
+    private String[] bannerDataStr = {"http://img5.mtime.cn/CMS/News/2017/04/12/120918.68633867_620X620.jpg", "http://img5.mtime.cn/CMS/News/2017/04/12/120721.75468522_620X620.jpg", "http://img5.mtime.cn/CMS/News/2017/04/12/120800.35757187_620X620.jpg", "http://img5.mtime.cn/CMS/News/2017/04/12/120824.98543025_620X620.jpg"};
+
+    @Override
+    protected int getContentView() {
+        return R.layout.fragment_home;
+    }
+
+    @Override
+    public void initVars() {
+    }
+
+    @Override
+    public void initViews() {
+        movieRecyclerView.setLayoutManager(new LinearLayoutManager(getBaseActivity()));
+
+        headerView = getHeaderView();
+        convenientBanner = ButterKnife.findById(headerView, R.id.convenientBanner);
+    }
+
+    /**
+     * 设置Banner数据
+     */
+    public void updataBannerData(final List<MovieInfoEntity> bannerInfos) {
+        convenientBanner.setPages(
+                new CBViewHolderCreator<LocalImageHolderView>() {
+                    @Override
+                    public LocalImageHolderView createHolder() {
+                        return new LocalImageHolderView();
+                    }
+                }, bannerInfos)
+                .setPageIndicator(new int[]{R.mipmap.ic_page_indicator, R.mipmap.ic_page_indicator_focused});
+        //设置两个点图片作为翻页指示器，不设置则没有指示器，可以根据自己需求自行配合自己的指示器,不需要圆点指示器可用不设
+        convenientBanner.startTurning(4000);
+        //convenientBanner.setScrollDuration(3000);
+        convenientBanner.setCanLoop(true);
+        convenientBanner.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Logger.e("banner position --->" + position);
+            }
+        });
+    }
+
+    @Override
+    public void loadData() {
+
+        List<MovieInfoEntity> datas = new ArrayList<MovieInfoEntity>();
+        List<MovieInfoEntity> bannerDatas = new ArrayList<MovieInfoEntity>();
+        for (int i = 0; i < movieStr.length; i++) {
+            MovieInfoEntity movieInfoEntity = new MovieInfoEntity(MovieInfoEntity.CLICK_ITEM_VIEW);
+            movieInfoEntity.setName("电影名称" + (i + 1));
+            movieInfoEntity.setUrl(movieStr[i]);
+            datas.add(movieInfoEntity);
+        }
+
+        for (int i = 0; i < bannerDataStr.length; i++) {
+            MovieInfoEntity movieInfoEntity = new MovieInfoEntity(MovieInfoEntity.CLICK_ITEM_VIEW);
+            movieInfoEntity.setUrl(bannerDataStr[i]);
+            bannerDatas.add(movieInfoEntity);
+        }
+
+        adpater = new HeaderAndFooterAdapter(getBaseActivity(), datas);
+        adpater.addHeaderView(headerView);
+        movieRecyclerView.setAdapter(adpater);
+        updataBannerData(bannerDatas);
+    }
+
+    @Override
+    protected void initFragmentConfig() {
+
+    }
+
+    private View getHeaderView() {
+        View view = getBaseActivity().getLayoutInflater().inflate(R.layout.main_head_view, null);
+        return view;
+    }
+
+    public class LocalImageHolderView implements Holder<MovieInfoEntity> {
+        private ImageView imageView;
+
+        @Override
+        public View createView(Context context) {
+            imageView = new ImageView(context);
+            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            return imageView;
+        }
+
+        @Override
+        public void UpdateUI(Context context, final int position, MovieInfoEntity data) {
+            Glide.with(context).load(data.getUrl()).into(imageView);
+        }
+    }
+}

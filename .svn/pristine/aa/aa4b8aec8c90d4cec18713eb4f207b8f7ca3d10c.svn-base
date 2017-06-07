@@ -1,0 +1,155 @@
+package com.ant.funsfilm.ui.activity;
+
+import android.app.ProgressDialog;
+import android.os.Bundle;
+import android.support.v4.app.FragmentTabHost;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TabHost;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.ant.funsfilm.R;
+import com.ant.funsfilm.presenter.MoviePresenterImp;
+import com.ant.funsfilm.presenter.Presenter;
+import com.ant.funsfilm.ui.fragment.HomeFragment;
+import com.ant.funsfilm.view.MovieView;
+import com.jaeger.library.StatusBarUtil;
+import com.orhanobut.logger.Logger;
+
+import butterknife.BindView;
+import okhttp3.ResponseBody;
+
+/**
+ * Created by admin on 2017/4/8.
+ */
+
+public class MainActivity extends BaseActivity implements MovieView {
+
+    private long clickTime = 0;
+
+    //定义FragmentTabHost对象
+    @BindView(R.id.tabhost)
+    public FragmentTabHost mTabHost;
+
+    //定义一个布局
+    private LayoutInflater layoutInflater;
+
+    //定义数组来存放Fragment界面
+    private Class fragmentArray[] = {HomeFragment.class, HomeFragment.class, HomeFragment.class, HomeFragment.class};
+
+    //定义数组来存放按钮图片
+    private int mImageViewArray[] = {R.drawable.home_selector, R.drawable.category_selector, R.drawable.square_selector,
+            R.drawable.my_selector};
+
+    //Tab选项卡的文字
+    private int mTextviewArray[] = {R.string.home_item_name, R.string.category_item_name, R.string.square_item_name, R.string.my_item_name};
+
+    private MoviePresenterImp moviePresenterImp = null;
+
+    private ProgressDialog progressDialog = null;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected Presenter getPresenter() {
+        return null;
+    }
+
+    @Override
+    protected void initVars() {
+        StatusBarUtil.setColor(MainActivity.this, getResources().getColor(R.color.colorAccent),0);
+        //实例化布局对象
+        layoutInflater = LayoutInflater.from(this);
+
+        moviePresenterImp = new MoviePresenterImp(this, this);
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("数据加载中");
+    }
+
+    @Override
+    protected void initViews() {
+        //初始化TabHost
+        mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
+        mTabHost.getTabWidget().setDividerDrawable(null);
+
+        //得到fragment的个数
+        int count = fragmentArray.length;
+
+        for (int i = 0; i < count; i++) {
+            //为每一个Tab按钮设置图标、文字和内容
+            TabHost.TabSpec tabSpec = mTabHost.newTabSpec(getResources().getString(mTextviewArray[i])).setIndicator(getTabItemView(i));
+            //将Tab按钮添加进Tab选项卡中
+            mTabHost.addTab(tabSpec, fragmentArray[i], null);
+        }
+
+        //默认选中第一页
+        setCurrentTab(0);
+    }
+
+    /**
+     * 给Tab按钮设置图标和文字
+     */
+    private View getTabItemView(int index) {
+        View view = layoutInflater.inflate(R.layout.tab_item_view, null);
+
+        ImageView imageView = (ImageView) view.findViewById(R.id.imageview);
+        imageView.setImageResource(mImageViewArray[index]);
+
+        TextView textView = (TextView) view.findViewById(R.id.textview);
+        textView.setText(mTextviewArray[index]);
+
+        return view;
+    }
+
+    public void setCurrentTab(int tabPosition) {
+        mTabHost.setCurrentTab(tabPosition);
+    }
+
+    @Override
+    protected void initData(Bundle savedInstanceState) {
+    }
+
+    @Override
+    public void showProgress() {
+        if (progressDialog != null && !progressDialog.isShowing()) {
+            progressDialog.show();
+        }
+    }
+
+    @Override
+    public void dismissProgress() {
+        if (progressDialog != null && progressDialog.isShowing()) {
+            progressDialog.dismiss();
+        }
+    }
+
+    @Override
+    public void loadDataSuccess(ResponseBody tData) {
+        Logger.e("result--->" + tData.toString());
+    }
+
+    @Override
+    public void loadDataError(Throwable throwable) {
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        if ((System.currentTimeMillis() - clickTime) > 2000) {
+            clickTime = System.currentTimeMillis();
+            Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
+        } else {
+            System.exit(0);
+        }
+    }
+}

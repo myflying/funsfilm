@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\admin\.android\build-cache\cabd80eecae2bfeded4bb006d8e0dd68197732b8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="13717eebb33e0c2e7aecfb05fd53d0bca391e8dc">
+        <dex dex="E:\zdh\as_workspace\Funsfilm\app\build\intermediates\pre-dexed\debug\classes_89486445fb17f79fc06d5f4c5ecd4b634909e834.jar" />
+    </item>
+
+</items>

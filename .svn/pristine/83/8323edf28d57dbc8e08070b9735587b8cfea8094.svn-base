@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher_round.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    }
+]

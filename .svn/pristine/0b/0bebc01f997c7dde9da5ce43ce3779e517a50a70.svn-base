@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\home_normal_icon.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\home_normal_icon.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\movie_default.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\movie_default.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\movie_default1.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\movie_default1.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\domestic_movie_icon.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\domestic_movie_icon.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\my_select_icon.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\my_select_icon.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\square_normal_icon.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\square_normal_icon.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_page_indicator.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_page_indicator.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\square_select_icon.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\square_select_icon.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\search_icon.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\search_icon.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\jk_movie_icon.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\jk_movie_icon.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ea_movie_icon.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\ea_movie_icon.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\home_select_icon.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\home_select_icon.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\new_movie_icon.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\new_movie_icon.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\category_select_icon.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\category_select_icon.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\category_normal_icon.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\category_normal_icon.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher_round.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_page_indicator_focused.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_page_indicator_focused.png"
+    },
+    {
+        "merged": "E:\\zdh\\as_workspace\\Funsfilm\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\my_normal_icon.png",
+        "source": "E:\\zdh\\as_workspace\\Funsfilm\\app\\src\\main\\res\\mipmap-xxhdpi\\my_normal_icon.png"
+    }
+]
