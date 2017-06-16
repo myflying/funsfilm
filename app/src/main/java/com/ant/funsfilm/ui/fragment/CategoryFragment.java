@@ -4,6 +4,7 @@ import android.content.Intent;
 
 import com.ant.funsfilm.R;
 import com.ant.funsfilm.ui.activity.CategoryDetailActivity;
+import com.ant.funsfilm.ui.activity.TvListActivity;
 
 import butterknife.OnClick;
 
@@ -41,6 +42,12 @@ public class CategoryFragment extends BaseFragment {
     @OnClick(R.id.movie_btn)
     public void movie(){
         Intent intent = new Intent(getBaseActivity(), CategoryDetailActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.tv_btn)
+    public void tv(){
+        Intent intent = new Intent(getBaseActivity(), TvListActivity.class);
         startActivity(intent);
     }
 }

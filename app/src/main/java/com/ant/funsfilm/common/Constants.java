@@ -32,4 +32,6 @@ public class Constants {
     public static final String WHETHER_URL = "http://api.avatardata.cn/";
 
     public static final String SHARES_URL = "http://web.juhe.cn:8080/finance/stock/";
+
+    public static final String TV_URL = "http://www.ttmeiju.com/";
 }
